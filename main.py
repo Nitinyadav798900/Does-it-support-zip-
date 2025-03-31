@@ -49,7 +49,7 @@ async def show_random_emojis(message):
     return emoji_message
     
 # Define the owner's user ID
-OWNER_ID = 6530997270 # Replace with the actual owner's user ID
+OWNER_ID = 1714266885 # Replace with the actual owner's user ID
 
 # List of sudo users (initially empty or pre-populated)
 SUDO_USERS = [1714266885]
@@ -70,7 +70,7 @@ bot = Client(
 @bot.on_message(filters.command("sudo"))
 async def sudo_command(bot: Client, message: Message):
     user_id = message.chat.id
-    if user_id != OWNER_ID:1714266885
+    if user_id != OWNER_ID:
         await message.reply_text("**🚫 You are not authorized to use this command.**")
         return
 
